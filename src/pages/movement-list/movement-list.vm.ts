@@ -1,8 +1,9 @@
 export interface accountMovement {
     id: number,
-    fecha: Date,
-    fechaValor: Date,
+    fecha: string,
+    fechaValor: string,
     descripcion: string,
     importe: number,
-    saldo: number
+    saldo: number,
+    accountId:number
 }
