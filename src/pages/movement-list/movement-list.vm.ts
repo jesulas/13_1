@@ -1,5 +1,5 @@
 export interface accountMovement {
-    id: number,
+    id: string,
     fecha: string,
     fechaValor: string,
     descripcion: string,

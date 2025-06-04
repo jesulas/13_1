@@ -5,7 +5,7 @@ const urlMovements = `${import.meta.env.VITE_BASE_API_URL}/movements`;
 
 
 
-export const getMovements = (accountId: string): Promise<accountMovement[]> =>
+export const getMovements = (accountId: string | undefined): Promise<accountMovement[]> =>
   Axios.get<accountMovement[]>(urlMovements, { params: { accountId } }).then(
     ({ data }) => data
   );
