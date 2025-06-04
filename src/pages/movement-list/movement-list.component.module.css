@@ -13,6 +13,10 @@
   border-bottom: 5px solid #232c3b;
 }
 
+.headerText{
+  font-size: 30px;
+}
+
 .grid-container {
   max-width: 100%;
   overflow-x: auto;

@@ -1,4 +1,4 @@
-export interface apiMovement {
+export interface ApiMovement {
 id: string,
 description: string,
 amount: number,

@@ -1,8 +1,8 @@
 import React from "react";
-import { accountMovement } from "../movement-list.vm";
+import { AccountMovement } from "../movement-list.vm";
 import classes from "../components/movement-table.component.module.css"
 interface Props {
-    accountLista: accountMovement;
+    accountLista: AccountMovement;
 }
 export const AccountListTableComponent: React.FC<Props> = (props) => {
 const { accountLista } = props;

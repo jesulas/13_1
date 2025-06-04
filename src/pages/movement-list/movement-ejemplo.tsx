@@ -1,12 +1,12 @@
 
 import Axios from "axios";
-import { accountMovement } from "./movement-list.vm";
+import { ApiMovement } from "./movement-list-api";
 const urlMovements = `${import.meta.env.VITE_BASE_API_URL}/movements`;
 
 
 
-export const getMovements = (accountId: string | undefined): Promise<accountMovement[]> =>
-  Axios.get<accountMovement[]>(urlMovements, { params: { accountId } }).then(
+export const getMovements = (accountId: string | undefined): Promise<ApiMovement[]> =>
+  Axios.get<ApiMovement[]>(urlMovements, { params: { accountId } }).then(
     ({ data }) => data
   );
 

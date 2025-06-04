@@ -1,15 +1,15 @@
-import { accountMovement } from "../movement-list.vm";
-import { apiMovement } from "../movement-list-api";
-export const mapTransfersFromtoApi = (movementsList: apiMovement[]): accountMovement[] => {
+import { AccountMovement } from "../movement-list.vm";
+import { ApiMovement } from "../movement-list-api";
+export const mapTransfersFromtoApi = (movementsList: ApiMovement[]): AccountMovement[] => {
     return movementsList.map((movement) => {
        return{
         id: movement.id,
-        fecha:new Date(movement.transaction),
-        fechaValor: new Date(movement.realTransaction),
+        fecha: new Date(movement.transaction).toLocaleDateString(),
+        fechaValor: new Date(movement.realTransaction).toLocaleDateString(),
         descripcion: movement.description,
-        importe: movement.amount.toString,
-        saldo: movement.balance.toString,
-        accountId: movement.accountId
+        importe: movement.amount,
+        saldo: movement.balance,
+        accountId: Number(movement.accountId)
         }
     })
 

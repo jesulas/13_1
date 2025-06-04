@@ -1,4 +1,4 @@
-export interface accountMovement {
+export interface AccountMovement {
     id: string,
     fecha: string,
     fechaValor: string,
