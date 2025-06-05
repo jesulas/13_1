@@ -23,7 +23,6 @@ React.useEffect(() => {
           <h1 className={classes.headerText}>Saldos y Últimos movimientos</h1>
         </div>
        <div className={classes.gridContainer}>
-          <h2>Alias: Gastos mes</h2>
        <div className={classes.headerTable}>
           <span className={classes.headerCell}>FECHA</span>
           <span className={classes.headerCell}>FECHA VALOR</span>
