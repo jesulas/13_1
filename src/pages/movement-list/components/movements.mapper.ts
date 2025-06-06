@@ -14,3 +14,17 @@ export const mapTransfersFromtoApi = (movementsList: ApiMovement[]): AccountMove
     })
 
 }
+
+  export const mapTransferFromtoApi = (
+  movementsList: ApiMovement[]
+): AccountMovement => ({
+
+        id: movementsList[0].id,
+        fecha: new Date(movementsList[0].transaction).toLocaleDateString(),
+        fechaValor: new Date(movementsList[0].realTransaction).toLocaleDateString(),
+        descripcion: movementsList[0].description,
+        importe: movementsList[0].amount,
+        saldo: movementsList[0].balance,
+        accountId: Number(movementsList[0].accountId)
+        }
+)

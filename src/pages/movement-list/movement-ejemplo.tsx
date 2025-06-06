@@ -10,3 +10,8 @@ export const getMovements = (accountId: string | undefined): Promise<ApiMovement
     ({ data }) => data
   );
 
+export const getMovement = (accountId: string | undefined): Promise<ApiMovement> =>
+Axios.get<ApiMovement>(urlMovements, { params: { accountId } }).then(
+  ({ data }) => data
+);
+
