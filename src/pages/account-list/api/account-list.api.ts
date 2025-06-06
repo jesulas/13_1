@@ -6,3 +6,7 @@ const url = `${import.meta.env.VITE_BASE_API_URL}/account-list`;
 export const getAccountList = (): Promise<Account[]> =>
   Axios.get<Account[]>(url)
 .then(({ data }) => data);
+
+export const getAccountListSpecific = (id: string | undefined): Promise<Account> =>
+  Axios.get<Account>(url + "/" + id)
+.then(({ data }) => data);

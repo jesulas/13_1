@@ -11,6 +11,12 @@
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 5px solid #232c3b;
+} 
+
+.headerData{
+  display: flex;
+ justify-content: space-between;
+  width: 100%;
 }
 
 .headerText{

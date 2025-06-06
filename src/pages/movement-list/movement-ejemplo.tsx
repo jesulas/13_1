@@ -10,4 +10,3 @@ export const getMovements = (accountId: string | undefined): Promise<ApiMovement
     ({ data }) => data
   );
 
-  //13.3.3 pdf Login pg11
